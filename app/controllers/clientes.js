@@ -4,7 +4,7 @@ module.exports.listar_clientes = function(application,req,res){
 	var clientesDAO = new application.app.models.ClienteDAO(connection);
 	
 	clientesDAO.getClientes(function(error,result){
-		res.render("listar//cliente/clientes", {clientes : result });
+		res.render("listar/cliente/clientes", {clientes : result });
 	});
 
 }
