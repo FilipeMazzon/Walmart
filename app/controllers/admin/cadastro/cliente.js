@@ -1,6 +1,6 @@
 module.exports.cadastro_cliente = function(application,req,res){
 	res.render("admin/cadastro/cliente", { validacao : {} , cliente : {} });
-}
+};
 module.exports.cliente_salvar = function(application,req,res){
 	var cliente = req.body;
 	req.assert('nome', 'nome é obrigatório').notEmpty();
@@ -19,4 +19,4 @@ module.exports.cliente_salvar = function(application,req,res){
 	clientesDAO.salvarCliente(cliente,function(error,result){
 		res.redirect('/listar_clientes');
 	});
-}
+};

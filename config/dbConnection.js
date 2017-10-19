@@ -7,9 +7,8 @@ var connMySQL = function(){
 			password: '1234',
 			database: 'walmart'
 	});
-}
+};
 
 module.exports = function(){
 	return connMySQL;
-}
-		
+};
