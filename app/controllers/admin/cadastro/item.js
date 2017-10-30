@@ -1,6 +1,6 @@
 module.exports.cadastro_item = function(application,req,res){
 	res.render("admin/cadastro/item",{ validacao : {} ,item: {} });
-}
+};
 module.exports.item_salvar = function(application,req,res){
 	var item = req.body;
     console.log(item);
@@ -22,4 +22,4 @@ module.exports.item_salvar = function(application,req,res){
 	itemDAO.salvarObjeto(item,function(error,result){
 		res.redirect('/listar_itens');
 	});
-}
+};
