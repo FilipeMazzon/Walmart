@@ -1,14 +1,18 @@
-var mysql = require('mysql');
+var mongo = require('mongodb');
 
-var connMySQL = function(){
-	return mysql.createConnection({
-			host: 'localhost',
-			user: 'root',
-			password: '1234',
-			database: 'walmart'
-	});
+var connMongoDB = function () {
+    var db = new mongo.Db(
+        'walmart',
+        new mongo.Server(
+            'localhost',//string contendo o endereço do servidor
+            27017,
+            {}
+        ),
+        {}
+    );
+    return db;
 };
 
-module.exports = function(){
-	return connMySQL;
+module.exports = function () {
+    return connMongoDB;
 };

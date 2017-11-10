@@ -1,20 +1,16 @@
-module.exports.listar_itens = function(application,req,res){
+module.exports.listar_itens = function (application, req, res) {
 
-	var connection = application.config.dbConnection();
-	var itemDAO = new application.app.models.ItemDAO(connection);
+    var connection = application.config.dbConnection;
+    var itemDAO = new application.app.models.ItemDAO(connection);
 
-	itemDAO.getObjetos(function(error,result){
-		res.render("listar/item/itens",{item : result});
-	})
-
+    itemDAO.getItens(req, res, "listar");
 };
-module.exports.item = function(application,req,res){
-	var connection = application.config.dbConnection();
-	var itemDAO = new application.app.models.ItemDAO(connection);
+module.exports.item = function (application, req, res) {
+    var id_item = req.query;
 
-	var id_item = req.query;
+    var connection = application.config.dbConnection;
+    var itemDAO = new application.app.models.ItemDAO(connection);
 
-    itemDAO.getObjeto(id_item,function(error,result){
-		res.render("listar/item/item", {item : result});
-	})
+    itemDAO.getItem(id_item, req, res);
+
 };

@@ -1,21 +1,21 @@
-module.exports.login = function(application,req,res){
-	res.render("login/login",{validacao : {} , login : {}});
-}
-module.exports.check = function(application,req,res){
-	var login= req.body;
-	console.log(req.body);
+module.exports.login = function (application, req, res) {
+    res.render("login/login", {validacao: {}, login: {}});
+};
+module.exports.check = function (application, req, res) {
+    var dados = req.body;
 
-	var connection = application.config.dbConnection();
-	var loginDao = new application.app.models.LoginDAO(connection);
+    req.assert('user', 'usuario não pode ser vazio').notEmpty();
+    req.assert('password', 'senha não pode estar vazia').notEmpty();
 
-	if(login.nome =="admin" && login.senha =="admin"){
-		res.redirect("/cadastro_cliente");
-		return;
-	}
-	loginDao.logarCliente(login,function(error,result){
-		res.redirect('/home',{usuario: result});
-	});
-	
-	validacao = "senha ou usario invalido";
-	res.render("login/login",{validacao :validacao, login: login });
-}
+    var erros = req.validationErrors();
+
+    if (erros) {
+        res.render("login/login", {validacao: erros, login: dados});
+        return;
+    }
+    var connection = application.config.dbConnection;
+    var clienteDAO = new application.app.models.ClienteDAO(connection);
+
+    clienteDAO.autentificar(dados, req, res);
+
+};

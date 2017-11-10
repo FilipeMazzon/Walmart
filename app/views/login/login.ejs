@@ -4,16 +4,16 @@
 <meta charset="UTF-8">
 
         <title>Walmart Login</title>
-        
+
         <!-- JQuery -->
         <script src="js/jquery-2.2.1.js"></script>
         <script src="js/login.js"></script>
         <!-- bootstrap - link cdn -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    
+
         <!-- incluindo css -->
         <link href="css/style.css" rel="stylesheet">
-        
+
         <!-- favicon -->
         <link rel="shortcut icon" href="images/walmart.ico" />
 </head>
@@ -29,40 +29,47 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                
+
                 <img src="images/Logo.png" />
             </div>
 
-        
+
         </div>
     </nav>
     <% if(validacao.length >0){ %>
 
-        <div class="row">
-            <div class="col-md-12">
-                <div class="alert alert-danger">
-                    <strong>Atenção!</strong>
-                    <ul>
-                        <li><%=validacao%></li>
-                    </ul>
-                </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="alert alert-danger">
+                <strong>Atenção!</strong>
+                <ul>
+                    <% for(var i = 0; i < validacao.length ;i++) { %>
+                    <li><%= validacao[i].msg %></li>
+                    <% } %>
+                </ul>
             </div>
         </div>
+    </div>
     <%}%>
     <div class="container">
-        <form action="/try/login" method="post">
+        <form action="/autentificar" method="post">
             <div class ="jumbotron" id="formulario">
                 <div class="txt">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                        <label for= "id">Login: </label><input placeholder= "Entre com este campo" class= "form-control" value="<%=login.nome%>" name="nome" id ="nome" size="auto" type="text"/>
-                    </div>      
+                        <label for="user">Login: </label><input placeholder="Entre com este campo" class="form-control"
+                                                                value="<%= login.user %>" name="user" id="user"
+                                                                size="auto" type="text"/>
+                    </div>
                     <div class ="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                        <label for= "senha">Senha </label><input placeholder= "Entre com este campo" value="<%=login.senha%>" class ="form-control" name="senha" id ="senha" size="auto" type="text"/>
+                        <label for="password">Senha </label><input placeholder="Entre com este campo"
+                                                                   value="<%= login.password %>" class="form-control"
+                                                                   name="password" id="password" size="auto"
+                                                                   type="text"/>
                     </div>
                 </div>
-                <button class ="submit" class="btn btn-default" id="Login">Login</button>
+                <button type="submit" class="btn btn-default" id="Login">Login</button>
             </div>
         </form>
     </div>

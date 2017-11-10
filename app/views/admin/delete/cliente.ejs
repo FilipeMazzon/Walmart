@@ -102,8 +102,8 @@
 				</ul>
 			</li>
 			<li><div class="divider"></div></li>
-			
-			<li><a href="#!">Logout<i class="material-icons">autorenew</i></a></li>
+
+            <li><a href="/logout">Logout<i class="material-icons">autorenew</i></a></li>
 		</ul>
 		<br/> <br/>
 		<% if(validacao.length >0){ %>
@@ -124,10 +124,10 @@
 		<div class="container">
 			<form action= "/deletar_cliente" method="post">
 			<div class="input-field col s6">
-				<select name ="id">
+                <select name="user">
 					<option value="" disabled selected>Choose your option</option>
 					<% for(var i=0;i < cliente.length;i++) {%>
-						<option value="<%= cliente[i].id %>"><%=cliente[i].nome %></option>
+                    <option value="<%= cliente[i].user %>"><%= cliente[i].user %></option>
 					<%}%>
 				</select>
 				<label>Deletar cliente</label>

@@ -102,8 +102,8 @@
 				</ul>
 			</li>
 			<li><div class="divider"></div></li>
-			
-			<li><a href="#!">Logout<i class="material-icons">autorenew</i></a></li>
+
+            <li><a href="/logout">Logout<i class="material-icons">autorenew</i></a></li>
 		</ul>
 		
 		
@@ -112,22 +112,22 @@
 			<br/><br/>
 
 	    <div class="container">
-			
-			<% if(validacao.length >0){ %>
 
-				<div class="row">
-					<div class="	" s="col-md-12">
-						<div class="alert alert-danger">
-							<strong>Atenção!</strong>
-							<ul>
-								<% for(var i=0; i < validacao.length ;i++) { %>
-									<li><%=validacao[i].msg%></li>
-								<%} %>
-							</ul>
-						</div>
-					</div>
-				</div>
-			<%}%>
+            <% if(validacao.length > 0){ %>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="alert alert-danger">
+                        <strong>Atenção!</strong>
+                        <ul>
+                            <% for(var i = 0; i < validacao.length ;i++) { %>
+                            <li><%= validacao[i].msg %></li>
+                            <% } %>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <% } %>
 			
 
 	   		<div class="row">

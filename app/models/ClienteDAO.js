@@ -1,20 +1,70 @@
 function ClienteDAO(connection) {
-    this._connection = connection;
+    this._connection = connection();
 }
-ClienteDAO.prototype.getClientes = function (callback) {
-    this._connection.query('select * from clientes order by nome', callback);
+
+ClienteDAO.prototype.salvarCliente = function (cliente) {
+    this._connection.open(function (err, mongoclient) {
+        mongoclient.collection("clientes", function (err, collection) {
+            collection.insert(cliente);
+            mongoclient.close();
+        });
+    });
 };
-ClienteDAO.prototype.getCliente = function (cliente, callback) {
-    this._connection.query('select * from clientes where id= ' + cliente.id, callback);
+ClienteDAO.prototype.dropCliente = function (cliente) {
+    console.log(cliente);
+    this._connection.open(function (err, mongoclient) {
+        mongoclient.collection("clientes", function (err, collection) {
+            collection.remove(cliente, 1);
+            mongoclient.close();
+        })
+    })
 };
-ClienteDAO.prototype.dropCliente = function (cliente, callback) {
-    this._connection.query('DELETE from clientes where id= ' + cliente.id, callback);
+ClienteDAO.prototype.getClientes = function (req, res, where) {
+    this._connection.open(function (err, mongoclient) {
+        mongoclient.collection("clientes", function (err, collection) {
+            collection.find().toArray(function (mongoError, result) {
+                if (where === "listar") {
+                    res.render("listar/cliente/clientes", {clientes: result});
+                }
+                if (where === "delete") {
+                    res.render("admin/delete/cliente", {cliente: result, validacao: {}});
+                }
+            });
+            mongoclient.close();
+        });
+    });
 };
-ClienteDAO.prototype.salvarCliente = function (cliente, callback) {
-    this._connection.query('insert into clientes set ? ', cliente, callback);
+ClienteDAO.prototype.getCliente = function (cliente, req, res) {
+    this._connection.open(function (err, mongoclient) {
+        mongoclient.collection("clientes", function (err, collection) {
+            collection.find(cliente).toArray(function (mongoError, result) {
+                res.render("listar/cliente/cliente", {clientes: result});
+            });
+            mongoclient.close();
+        });
+    });
 };
-ClienteDAO.prototype.editCliente = function (cliente, callback) {
-    this._connection.query('update clientes set ? where id= ' + cliente.id, cliente, callback);
+ClienteDAO.prototype.autentificar = function (dados, req, res) {
+    this._connection.open(function (err, mongoclient) {
+        mongoclient.collection("clientes", function (err, collection) {
+            collection.find(dados).toArray(function (mongoError, result) {
+                if (result[0].user === "admin" && result[0].password === "admin") {
+                    req.session.admin = true;
+                }
+                if (result[0] !== undefined) {
+                    req.session.autorizado = true;
+                    req.session.user = result[0].user;
+                }
+                if (req.session.autorizado) {
+                    res.redirect("/home");
+                }
+                else {
+                    res.render("login/login", {validacao: {}, login: result});
+                }
+            });
+            mongoclient.close();
+        });
+    });
 };
 
 module.exports = function () {

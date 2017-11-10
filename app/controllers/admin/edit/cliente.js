@@ -19,7 +19,6 @@ module.exports.get_info_cliente = function (application, req, res) {
     var connection = application.config.dbConnection();
     var clientesDAO = new application.app.models.ClienteDAO(connection);
     clientesDAO.getCliente(cliente, function (error, result) {
-
         res.render("admin/edit/cliente", {validacao: {}, cliente: {}, dados: result});
     })
 };
