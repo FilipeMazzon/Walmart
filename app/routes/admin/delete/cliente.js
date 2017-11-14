@@ -3,8 +3,11 @@ module.exports = function (application) {
         if (req.session.admin) {
             application.app.controllers.admin.delete.cliente.deletar_cliente(application, req, res);
         }
-        else {
+        else if (req.session.autorizado) {
             res.redirect('/home');
+        }
+        else {
+            res.redirect('/');
         }
 
     });
@@ -12,8 +15,11 @@ module.exports = function (application) {
         if (req.session.admin) {
             application.app.controllers.admin.delete.cliente.cliente_deletar(application, req, res);
         }
-        else {
+        else if (req.session.autorizado) {
             res.redirect('/home');
+        }
+        else {
+            res.redirect('/');
         }
 
     });

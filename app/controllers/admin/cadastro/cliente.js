@@ -1,5 +1,9 @@
 module.exports.cadastro_cliente = function (application, req, res) {
-    res.render("admin/cadastro/cliente", {validacao: {}, cliente: {}});
+    var dataUser = {
+        "nome": req.session.nome,
+        "user": req.session.user
+    };
+    res.render("admin/cadastro/cliente", {validacao: {}, cliente: {}, user: dataUser});
 
 };
 module.exports.cliente_salvar = function (application, req, res) {
@@ -10,9 +14,12 @@ module.exports.cliente_salvar = function (application, req, res) {
     req.assert('credito', 'credito é obrigatório').notEmpty();
     req.assert('credito', 'credito precisa ser inteiro').isInt();
     var erros = req.validationErrors();
-
+    var dataUser = {
+        "nome": req.session.nome,
+        "user": req.session.user
+    };
     if (erros) {
-        res.render('admin/cadastro/cliente', {validacao: erros, cliente: cliente});
+        res.render('admin/cadastro/cliente', {validacao: erros, cliente: cliente, user: dataUser});
         return;
     }
 

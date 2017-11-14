@@ -1,5 +1,6 @@
 var express = require('express');
 var consign = require('consign');
+var async = require('async');
 var bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
 var expressSession = require('express-session');

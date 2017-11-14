@@ -1,24 +1,33 @@
 module.exports.editar_cliente = function (application, req, res) {
-    var connection = application.config.dbConnection();
-    var clientesDAO = new application.app.models.ClienteDAO(connection);
-    clientesDAO.getClientes(function (error, result) {
-        res.render("admin/edit/cliente", {validacao: {}, cliente: result, dados: {}});
-    });
+    var connection = application.config.dbConnection;
+    var clienteDAO = new application.app.models.ClienteDAO(connection);
+    var dataUser = {
+        "nome": req.session.nome,
+        "user": req.session.user
+    };
+    clienteDAO.getClientes(req, res, "edit", dataUser);
 };
-module.exports.cliente_editar = function (application, req, res) {
-    var cliente = req.body;
-    var connection = application.config.dbConnection();
-    var clientesDAO = new application.app.models.ClienteDAO(connection);
+module.exports.chargeCliente = function (application, req, res) {
+    var clienteToChange = req.body;
+    var connection = application.config.dbConnection;
+    var dataUser = {
+        "nome": req.session.nome,
+        "user": req.session.user
+    };
+    var clienteDAO = new application.app.models.ClienteDAO(connection);
+    clienteDAO.getCliente(clienteToChange, req, res, "edit", dataUser);
 
-    clientesDAO.editCliente(cliente, function (error, result) {
-        res.render("admin/edit/cliente", {validacao: {}, cliente: result, dados: {}});
-    });
+
 };
-module.exports.get_info_cliente = function (application, req, res) {
-    var cliente = req.body;
-    var connection = application.config.dbConnection();
-    var clientesDAO = new application.app.models.ClienteDAO(connection);
-    clientesDAO.getCliente(cliente, function (error, result) {
-        res.render("admin/edit/cliente", {validacao: {}, cliente: {}, dados: result});
-    })
+module.exports.changeCliente = function (application, req, res) {
+    var theChange = req.body;
+    var clienteToChange = {
+        "user": theChange.user
+    };
+    console.log(theChange);
+    console.log(clienteToChange);
+    var connection = application.config.dbConnection;
+    var clienteDAO = new application.app.models.ClienteDAO(connection);
+    clienteDAO.updateCliente(clienteToChange, req, res, theChange);
+    res.redirect("/listar_clientes");
 };

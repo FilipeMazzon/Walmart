@@ -1,17 +1,22 @@
 module.exports.listar_clientes = function (application, req, res) {
     var connection = application.config.dbConnection;
     var clientesDAO = new application.app.models.ClienteDAO(connection);
-
-    clientesDAO.getClientes(req, res, "listar");
+    var dataUser = {
+        "nome": req.session.nome,
+        "user": req.session.user
+    };
+    clientesDAO.getClientes(req, res, "listar", dataUser);
 
 
 };
 
 module.exports.listar_cliente = function (application, req, res) {
     var cliente = req.query;
-
     var connection = application.config.dbConnection;
     var clientesDAO = new application.app.models.ClienteDAO(connection);
-
-    clientesDAO.getCliente(cliente, req, res);
+    var dataUser = {
+        "nome": req.session.nome,
+        "user": req.session.user
+    };
+    clientesDAO.getCliente(cliente, req, res, "listar", dataUser);
 };

@@ -3,16 +3,22 @@ module.exports = function (application) {
         if (req.session.admin) {
             application.app.controllers.admin.cadastro.cliente.cadastro_cliente(application, req, res);
         }
-        else {
+        else if (req.session.autorizado) {
             res.redirect('/home');
+        }
+        else {
+            res.redirect('/');
         }
     });
     application.post('/salvar_cliente', function (req, res) {
         if (req.session.admin) {
             application.app.controllers.admin.cadastro.cliente.cliente_salvar(application, req, res);
         }
-        else {
+        else if (req.session.autorizado) {
             res.redirect('/home');
+        }
+        else {
+            res.redirect('/');
         }
     });
 };

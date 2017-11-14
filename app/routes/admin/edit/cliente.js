@@ -3,25 +3,33 @@ module.exports = function (application) {
         if (req.session.admin) {
             application.app.controllers.admin.edit.cliente.editar_cliente(application, req, res);
         }
-        else {
+        else if (req.session.autorizado) {
             res.redirect('/home');
+        }
+        else {
+            res.redirect('/');
         }
     });
-    application.post('/editar_cliente', function (req, res) {
+    application.post('/editarClienteEspecifico', function (req, res) {
         if (req.session.admin) {
-            application.app.controllers.admin.edit.cliente.cliente_editar(application, req, res);
+            application.app.controllers.admin.edit.cliente.chargeCliente(application, req, res);
+        }
+        else if (req.session.autorizado) {
+            res.redirect('/home');
         }
         else {
-            res.redirect('/home');
+            res.redirect('/');
         }
     });
-    application.post('/editar_cliente_especifico', function (req, res) {
+    application.post('/editarClienteFinish', function (req, res) {
         if (req.session.admin) {
-            application.app.controllers.admin.edit.cliente.get_info_cliente(application, req, res);
+            application.app.controllers.admin.edit.cliente.changeCliente(application, req, res);
         }
-        else {
+        else if (req.session.autorizado) {
             res.redirect('/home');
         }
-
+        else {
+            res.redirect('/');
+        }
     });
 };

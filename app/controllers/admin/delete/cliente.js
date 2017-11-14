@@ -2,7 +2,11 @@ module.exports.deletar_cliente = function (application, req, res) {
 
     var connection = application.config.dbConnection;
     var clientesDAO = new application.app.models.ClienteDAO(connection);
-    clientesDAO.getClientes(req, res, "delete");
+    var dataUser = {
+        "nome": req.session.nome,
+        "user": req.session.user
+    };
+    clientesDAO.getClientes(req, res, "delete", dataUser);
 };
 module.exports.cliente_deletar = function (application, req, res) {
     var cliente = req.body;
@@ -12,11 +16,15 @@ module.exports.cliente_deletar = function (application, req, res) {
 
     var connection = application.config.dbConnection;
     var clienteDAO = new application.app.models.ClienteDAO(connection);
-    console;
+    var dataUser = {
+        "nome": req.session.nome,
+        "user": req.session.user
+    };
     if (erros) {
-        clienteDAO.getClientes(req, res, "delete");
+        clienteDAO.getClientes(req, res, "delete", dataUser);
         return;
     }
+
     clienteDAO.dropCliente(cliente);
     res.redirect('/listar_clientes');
 
