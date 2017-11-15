@@ -1,34 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b49cfeef-fa33-43f5-8172-6cd82345a05c" name="Default" comment="Projeto Finalizado">
+    <list default="true" id="b49cfeef-fa33-43f5-8172-6cd82345a05c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/admin/cadastro/cliente.js" afterPath="$PROJECT_DIR$/app/controllers/admin/cadastro/cliente.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/admin/cadastro/item.js" afterPath="$PROJECT_DIR$/app/controllers/admin/cadastro/item.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/admin/delete/cliente.js" afterPath="$PROJECT_DIR$/app/controllers/admin/delete/cliente.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/admin/delete/item.js" afterPath="$PROJECT_DIR$/app/controllers/admin/delete/item.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/admin/edit/cliente.js" afterPath="$PROJECT_DIR$/app/controllers/admin/edit/cliente.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/admin/edit/item.js" afterPath="$PROJECT_DIR$/app/controllers/admin/edit/item.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/clientes.js" afterPath="$PROJECT_DIR$/app/controllers/clientes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/compra.js" afterPath="$PROJECT_DIR$/app/controllers/compra.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home.js" afterPath="$PROJECT_DIR$/app/controllers/home.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/itens.js" afterPath="$PROJECT_DIR$/app/controllers/itens.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/ClienteDAO.js" afterPath="$PROJECT_DIR$/app/models/ClienteDAO.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/ItemDAO.js" afterPath="$PROJECT_DIR$/app/models/ItemDAO.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/compra.js" afterPath="$PROJECT_DIR$/app/routes/compra.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Home/index.ejs" afterPath="$PROJECT_DIR$/app/views/Home/index.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/cadastro/cliente.ejs" afterPath="$PROJECT_DIR$/app/views/admin/cadastro/cliente.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/cadastro/item.ejs" afterPath="$PROJECT_DIR$/app/views/admin/cadastro/item.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/delete/cliente.ejs" afterPath="$PROJECT_DIR$/app/views/admin/delete/cliente.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/delete/item.ejs" afterPath="$PROJECT_DIR$/app/views/admin/delete/item.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/edit/cliente.ejs" afterPath="$PROJECT_DIR$/app/views/admin/edit/cliente.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/edit/item.ejs" afterPath="$PROJECT_DIR$/app/views/admin/edit/item.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/compras/efetuada.ejs" afterPath="$PROJECT_DIR$/app/views/compras/efetuada.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/compras/negada.ejs" afterPath="$PROJECT_DIR$/app/views/compras/negada.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/listar/cliente/cliente.ejs" afterPath="$PROJECT_DIR$/app/views/listar/cliente/cliente.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/listar/cliente/clientes.ejs" afterPath="$PROJECT_DIR$/app/views/listar/cliente/clientes.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/listar/item/item.ejs" afterPath="$PROJECT_DIR$/app/views/listar/item/item.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/listar/item/itens.ejs" afterPath="$PROJECT_DIR$/app/views/listar/item/itens.ejs" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,8 +27,8 @@
       <file leaf-file-name="ClienteDAO.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/ClienteDAO.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="66" column="43" lean-forward="false" selection-start-line="66" selection-start-column="43" selection-end-line="66" selection-end-column="43" />
+            <state relative-caret-position="31">
+              <caret line="60" column="35" lean-forward="true" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
               <folding>
                 <element signature="e#32#33#0" expanded="true" />
                 <element signature="e#71#72#0" expanded="true" />
@@ -72,10 +46,13 @@
                 <element signature="e#1080#1793#0" expanded="true" />
                 <element signature="e#1152#1785#0" expanded="true" />
                 <element signature="e#1222#1740#0" expanded="true" />
-                <element signature="e#1880#2483#0" expanded="true" />
                 <element signature="e#1936#2479#0" expanded="true" />
                 <element signature="e#2008#2471#0" expanded="true" />
                 <element signature="e#2085#2426#0" expanded="true" />
+                <element signature="e#2548#3513#0" expanded="true" />
+                <element signature="e#2604#3509#0" expanded="true" />
+                <element signature="e#2676#3501#0" expanded="true" />
+                <element signature="e#2751#3456#0" expanded="true" />
                 <element signature="e#3583#4601#0" expanded="true" />
                 <element signature="e#3640#4597#0" expanded="true" />
                 <element signature="e#3713#4589#0" expanded="true" />
@@ -193,8 +170,8 @@
             <state relative-caret-position="378">
               <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
               <folding>
-                <element signature="e#65#384#0" expanded="true" />
-                <element signature="e#889#1282#0" expanded="true" />
+                <element signature="e#65#383#0" expanded="true" />
+                <element signature="e#887#1280#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -585,7 +562,7 @@
       <workItem from="1510250312666" duration="19107000" />
       <workItem from="1510327992908" duration="7279000" />
       <workItem from="1510574627780" duration="35167000" />
-      <workItem from="1510698546125" duration="10312000" />
+      <workItem from="1510698546125" duration="10329000" />
     </task>
     <task id="LOCAL-00001" summary="Projeto Atualizado">
       <created>1508104904950</created>
@@ -636,11 +613,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510674266900</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Projeto Finalizado">
+      <created>1510773753349</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1510773753349</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130029000" />
+    <option name="totallyTimeSpent" value="130046000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -966,7 +950,7 @@
         <state relative-caret-position="483">
           <caret line="23" column="6" lean-forward="false" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
           <folding>
-            <element signature="e#66#390#0" expanded="false" />
+            <element signature="e#66#389#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -976,7 +960,7 @@
         <state relative-caret-position="147">
           <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
           <folding>
-            <element signature="e#437#968#0" expanded="false" />
+            <element signature="e#436#967#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1012,7 +996,7 @@
         <state relative-caret-position="252">
           <caret line="12" column="10" lean-forward="true" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
           <folding>
-            <element signature="e#66#391#0" expanded="true" />
+            <element signature="e#66#390#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1116,16 +1100,16 @@
         <state relative-caret-position="378">
           <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
           <folding>
-            <element signature="e#65#384#0" expanded="true" />
-            <element signature="e#889#1282#0" expanded="true" />
+            <element signature="e#65#383#0" expanded="true" />
+            <element signature="e#887#1280#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/ClienteDAO.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="66" column="43" lean-forward="false" selection-start-line="66" selection-start-column="43" selection-end-line="66" selection-end-column="43" />
+        <state relative-caret-position="31">
+          <caret line="60" column="35" lean-forward="true" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
           <folding>
             <element signature="e#32#33#0" expanded="true" />
             <element signature="e#71#72#0" expanded="true" />
@@ -1143,10 +1127,13 @@
             <element signature="e#1080#1793#0" expanded="true" />
             <element signature="e#1152#1785#0" expanded="true" />
             <element signature="e#1222#1740#0" expanded="true" />
-            <element signature="e#1880#2483#0" expanded="true" />
             <element signature="e#1936#2479#0" expanded="true" />
             <element signature="e#2008#2471#0" expanded="true" />
             <element signature="e#2085#2426#0" expanded="true" />
+            <element signature="e#2548#3513#0" expanded="true" />
+            <element signature="e#2604#3509#0" expanded="true" />
+            <element signature="e#2676#3501#0" expanded="true" />
+            <element signature="e#2751#3456#0" expanded="true" />
             <element signature="e#3583#4601#0" expanded="true" />
             <element signature="e#3640#4597#0" expanded="true" />
             <element signature="e#3713#4589#0" expanded="true" />
