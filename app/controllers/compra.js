@@ -1,11 +1,14 @@
 module.exports.finalizarCompra = function (application, req, res) {
     var dataUser = {
-        "nome" : req.session.nome,
-        "user" : req.session.user
+        "nome": req.session.nome,
+        "user": req.session.user,
+        "credito": req.session.saldo
     };
-    var precoItem = req.query;
+    var precoItem = req.body;
 
     var connection = application.config.dbConnection;
-    var itemDAO = new application.app.models.ItemDAO(connection);
-    itemDAO.comprar(precoItem,req,res,dataUser);
+    var clienteDAO = new application.app.models.ClienteDAO(connection);
+    clienteDAO.comprar(precoItem, req, res, dataUser);
+
+
 };

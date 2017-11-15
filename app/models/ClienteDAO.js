@@ -64,10 +64,13 @@ ClienteDAO.prototype.autentificar = function (dados, req, res) {
     this._connection.open(function (err, mongoclient) {
         mongoclient.collection("clientes", function (err, collection) {
             collection.find(dados).toArray(function (mongoError, result) {
-                if (result[0].user === "admin" && result[0].password === "admin") {
-                    req.session.admin = true;
+                if (result === undefined) {
+                    res.render("login/login", {validacao: {"msg": "senha invalidade"}, login: {}});
                 }
-                if (result[0] !== undefined) {
+                else {
+                    if (result[0].user === "admin" && result[0].password === "admin") {
+                        req.session.admin = true;
+                    }
                     req.session.autorizado = true;
                     req.session.user = result[0].user;
                     req.session.nome = result[0].nome;
@@ -76,15 +79,40 @@ ClienteDAO.prototype.autentificar = function (dados, req, res) {
                 if (req.session.autorizado) {
                     res.redirect("/home");
                 }
-                else {
-                    res.render("login/login", {validacao: {}, login: result});
-                }
             });
             mongoclient.close();
         });
     });
 };
 
+ClienteDAO.prototype.comprar = function (item, req, res, dataUser) {
+    this._connection.open(function (err, mongocliente) {
+        mongocliente.collection("clientes", function (err, collection) {
+            collection.find(dataUser).toArray(function (mongoError, result) {
+                var aux = {
+                    user: result[0].user,
+                    password: result[0].password,
+                    nome: result[0].nome,
+                    telefone: result[0].telefone,
+                    credito: result[0].credito
+                };
+
+                aux.credito = aux.credito - item.preco;
+                console.log();
+                if (aux.credito > 0) {
+                    req.session.saldo = aux.credito;
+                    collection.update(dataUser, aux, {upsert: true});
+
+                    res.render("compras/efetuada", {item: item, user: aux});
+                }
+                else {
+                    res.render("compras/negada", {user: dataUser});
+                }
+                mongocliente.close();
+            });
+        });
+    });
+};
 module.exports = function () {
     return ClienteDAO;
 };

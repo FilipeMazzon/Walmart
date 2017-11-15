@@ -3,7 +3,8 @@ module.exports.editar_cliente = function (application, req, res) {
     var clienteDAO = new application.app.models.ClienteDAO(connection);
     var dataUser = {
         "nome": req.session.nome,
-        "user": req.session.user
+        "user": req.session.user,
+        "credito": req.session.saldo
     };
     clienteDAO.getClientes(req, res, "edit", dataUser);
 };
@@ -12,7 +13,8 @@ module.exports.chargeCliente = function (application, req, res) {
     var connection = application.config.dbConnection;
     var dataUser = {
         "nome": req.session.nome,
-        "user": req.session.user
+        "user": req.session.user,
+        "credito": req.session.saldo
     };
     var clienteDAO = new application.app.models.ClienteDAO(connection);
     clienteDAO.getCliente(clienteToChange, req, res, "edit", dataUser);

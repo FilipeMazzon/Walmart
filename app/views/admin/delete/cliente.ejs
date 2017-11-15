@@ -47,6 +47,7 @@
             <a href="#!user"><img class="circle" src="images/perfil.jpg"></a>
             <a href="#!name"><span class="white-text name"><%= user.nome %></span></a>
             <a href="#!email"><span class="white-text email"><%= user.user %></span></a>
+            <a href="#!saldo"><span class="white-text email">Saldo:<%= user.credito %></span></a>
         </div>
     </li>
     <li><a href="/home">Home<i class="material-icons">home</i></a></li>
@@ -132,7 +133,9 @@
             <select name="user">
                 <option value="" disabled selected>Choose your option</option>
                 <% for(var i = 0;i < cliente.length;i++) { %>
+                <% if(cliente[i].user !== "admin"){ %>
                 <option value="<%= cliente[i].user %>"><%= cliente[i].user %></option>
+                <% } %>
                 <% } %>
             </select>
             <label>Deletar cliente</label>

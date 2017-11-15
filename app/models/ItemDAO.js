@@ -13,6 +13,7 @@ ItemDAO.prototype.salvarItem = function (item) {
 ItemDAO.prototype.updateItem = function (itemNome, req, res, item) {
     this._connection.open(function (err, mongocliente) {
         mongocliente.collection("itens", function (err, collection) {
+            console.log(itemNome);
             collection.update(itemNome, item, {upsert: true});
             mongocliente.close();
         });
@@ -27,23 +28,8 @@ ItemDAO.prototype.dropItem = function (itemList, req, res) {
         });
     });
 };
-ItemDAO.prototype.comprar = function (item, req, res, dataUser) {
-    this._connection.open(function (err, mongocliente) {
-        mongocliente.collection("itens", function (err, collection) {
-            collection.find(item).toArray(function (mongoError, result) {
-                if (req.session.saldo >= result[0].preco) {
-                    console.log("chegou aqui");
-                    res.render("compras/efetuada", {item: result, user: dataUser});
-                }
-                else {
-                    console.log("pqp não era pra ter chegado aqui");
-                    res.render("compras/negada", {user: dataUser});
-                }
-            });
-            mongocliente.close();
-        })
-    })
-};
+
+
 ItemDAO.prototype.getItens = function (req, res, where, dataUser) {
     this._connection.open(function (err, mongoclient) {
         mongoclient.collection("itens", function (err, collection) {

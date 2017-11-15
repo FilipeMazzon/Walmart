@@ -3,7 +3,8 @@ module.exports.editar_item = function (application, req, res) {
     var itemDAO = new application.app.models.ItemDAO(connection);
     var dataUser = {
         "nome": req.session.nome,
-        "user": req.session.user
+        "user": req.session.user,
+        "credito": req.session.saldo
     };
     itemDAO.getItens(req, res, "edit", dataUser);
 
@@ -14,7 +15,8 @@ module.exports.chargeItem = function (application, req, res) {
     var itemDAO = new application.app.models.ItemDAO(connection);
     var dataUser = {
         "nome": req.session.nome,
-        "user": req.session.user
+        "user": req.session.user,
+        "credito": req.session.saldo
     };
     itemDAO.getItem(itemToChange, req, res, "edit", dataUser);
 };
