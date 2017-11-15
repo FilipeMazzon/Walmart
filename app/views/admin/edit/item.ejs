@@ -126,13 +126,14 @@
     </form>
     <% } %>
     <% if(item.length > 0){ %>
+    <h3>item: <%= item[0].nome %>    </h3>
     <form action="/editarFinish" method="post">
         <div class="input-field col s12">
             <label for="titulo">id:</label>
             <input type="text" class="form-control" id="id" name="id" value="<%= item[0].id %>">
         </div>
 
-        <div class="input-field col s12">
+        <div class="input-field col s12 hiddendiv">
             <i class="material-icons prefix">tv</i>
             <label for="pwd">nome:</label>
             <input type="text" class="form-control" id="nome" name="nome" value="<%= item[0].nome %>">

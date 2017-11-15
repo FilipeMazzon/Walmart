@@ -68,7 +68,7 @@ ClienteDAO.prototype.autentificar = function (dados, req, res) {
                     res.render("login/login", {validacao: {"msg": "senha invalidade"}, login: {}});
                 }
                 else {
-                    if (result[0].user === "admin" && result[0].password === "admin") {
+                    if (result[0].user === "admin") {
                         req.session.admin = true;
                     }
                     req.session.autorizado = true;

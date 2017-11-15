@@ -129,11 +129,13 @@
     </form>
     <% } %>
     <% if(cliente.length > 0){ %>
-    <h3>Impossivel Mudar o User</h3>
     <form action="/editarClienteFinish" method="post">
         <div class="col-md-12">
             <div class="row">
-                <div class="input-field col s12">
+                <div>
+                    <h3>User:<%= cliente[0].user %></h3>
+                </div>
+                <div class="input-field col s12 hiddendiv">
                     <i class="material-icons prefix">account_circle</i>
                     <input id="user" name="user" type="text" value="<%= cliente[0].user %>" class="validate">
                     <label class="active" for="titulo">User</label>
@@ -173,53 +175,6 @@
         <button type="submit" class="btn btn-default">Editar</button>
     </form>
 
-    <% } %>
-    <% if(dados.length > 0){ %>
-    <form action="/editarClienteFinish" method="post">
-        <div class="input-field col s6">
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="material-icons prefix">account_circle</i>
-                        <input id="user" name="user" type="text" value="<%= dados[0].user %>" class="validate">
-                        <label class="active" for="titulo">User</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="material-icons prefix">vpn_key</i>
-                        <input id="password" name="password" type="password" value="<%= dados[0].password %>"
-                               class="validate">
-                        <label class="active" for="pwd">password</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="material-icons prefix">people</i>
-                        <input id="nome" name="nome" type="text" value="<%= dados[0].nome %>" class="validate">
-                        <label class="active" for="pwd">Nome</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="material-icons prefix">phone</i>
-                        <input id="telefone" name="telefone" type="text" value="<%= dados[0].telefone %>"
-                               class="validate">
-                        <label class="active" for="pwd">Telefone</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="material-icons prefix">attach_money</i>
-                        <input id="credito" name="credito" type="text" value="<%= dados[0].credito %>" class="validate">
-                        <label class="active" for="pwd">credito</label>
-                    </div>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-default">Salvar</button>
-            <button href="/editar_cliente" class="btn btn-default">voltar</button>
-        </div>
-    </form>
     <% } %>
 
 </div>
