@@ -65,10 +65,17 @@ ClienteDAO.prototype.autentificar = function (dados, req, res) {
         mongoclient.collection("clientes", function (err, collection) {
             collection.find(dados).toArray(function (mongoError, result) {
                 if (result.length === 0) {
-                    res.render("login/login", {validacao: {"msg": "senha invalidade"}, login: {}});
+                    res.render("login/login", {
+                        validacao: [{
+                            "msg": "login ou senha invalidade",
+                            "param": {},
+                            "value": {},
+                            "location": {},
+                            "nestedErrors": {}
+                        }], login: {}
+                    });
                 }
                 else {
-                    console.log("chegou aqui");
                     if (result[0].user === "admin") {
                         req.session.admin = true;
                     }

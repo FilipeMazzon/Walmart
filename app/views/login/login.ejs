@@ -43,6 +43,7 @@
 
     </div>
 </nav>
+<% console.log(validacao); %>
 <% if(validacao.length > 0){ %>
 
 <div class="row">
@@ -50,7 +51,9 @@
         <div class="alert alert-danger">
             <strong>Atenção!</strong>
             <ul>
+
                 <% for(var i = 0; i < validacao.length ;i++) { %>
+
                 <li><%= validacao[i].msg %></li>
                 <% } %>
             </ul>
