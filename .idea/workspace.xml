@@ -4,9 +4,10 @@
     <list default="true" id="b49cfeef-fa33-43f5-8172-6cd82345a05c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/ClienteDAO.js" afterPath="$PROJECT_DIR$/app/models/ClienteDAO.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/login.js" afterPath="$PROJECT_DIR$/app/routes/login.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/edit/cliente.ejs" afterPath="$PROJECT_DIR$/app/views/admin/edit/cliente.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/edit/item.ejs" afterPath="$PROJECT_DIR$/app/views/admin/edit/item.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/compras/efetuada.ejs" afterPath="$PROJECT_DIR$/app/views/compras/efetuada.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/compras/negada.ejs" afterPath="$PROJECT_DIR$/app/views/compras/negada.ejs" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,11 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="ClienteDAO.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ClienteDAO.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/ClienteDAO.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="51" column="30" lean-forward="false" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
+            <state relative-caret-position="126">
+              <caret line="69" column="17" lean-forward="false" selection-start-line="69" selection-start-column="17" selection-end-line="69" selection-end-column="17" />
               <folding>
                 <element signature="e#32#33#0" expanded="true" />
                 <element signature="e#71#72#0" expanded="true" />
@@ -50,16 +51,16 @@
                 <element signature="e#1080#1793#0" expanded="true" />
                 <element signature="e#1152#1785#0" expanded="true" />
                 <element signature="e#1222#1740#0" expanded="true" />
-                <element signature="e#2548#3479#0" expanded="true" />
-                <element signature="e#2604#3475#0" expanded="true" />
-                <element signature="e#2676#3467#0" expanded="true" />
-                <element signature="e#2751#3422#0" expanded="true" />
-                <element signature="e#3549#4567#0" expanded="true" />
-                <element signature="e#3606#4563#0" expanded="true" />
-                <element signature="e#3679#4555#0" expanded="true" />
-                <element signature="e#3757#4543#0" expanded="true" />
-                <element signature="e#4598#4599#0" expanded="true" />
-                <element signature="e#4623#4624#0" expanded="true" />
+                <element signature="e#1880#2483#0" expanded="true" />
+                <element signature="e#1936#2479#0" expanded="true" />
+                <element signature="e#2008#2471#0" expanded="true" />
+                <element signature="e#2085#2426#0" expanded="true" />
+                <element signature="e#3593#4611#0" expanded="true" />
+                <element signature="e#3650#4607#0" expanded="true" />
+                <element signature="e#3723#4599#0" expanded="true" />
+                <element signature="e#3801#4587#0" expanded="true" />
+                <element signature="e#4642#4643#0" expanded="true" />
+                <element signature="e#4667#4668#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -68,18 +69,38 @@
       <file leaf-file-name="cliente.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/admin/edit/cliente.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="135" column="29" lean-forward="false" selection-start-line="135" selection-start-column="29" selection-end-line="135" selection-end-column="29" />
+            <state relative-caret-position="105">
+              <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="item.ejs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="item.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/admin/edit/item.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="128" column="29" lean-forward="false" selection-start-line="128" selection-start-column="29" selection-end-line="128" selection-end-column="29" />
+            <state relative-caret-position="105">
+              <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="efetuada.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/compras/efetuada.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="5" column="18" lean-forward="false" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="negada.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/compras/negada.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="5" column="18" lean-forward="false" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -88,8 +109,8 @@
       <file leaf-file-name="item.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/admin/cadastro/item.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+            <state relative-caret-position="63">
+              <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
               <folding>
                 <element signature="e#64#282#0" expanded="true" />
               </folding>
@@ -110,35 +131,11 @@
       <file leaf-file-name="cliente.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/admin/cadastro/cliente.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="32" column="32" lean-forward="true" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+            <state relative-caret-position="378">
+              <caret line="25" column="86" lean-forward="true" selection-start-line="25" selection-start-column="86" selection-end-line="25" selection-end-column="86" />
               <folding>
                 <element signature="e#67#292#0" expanded="true" />
-                <element signature="e#359#1226#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="eng_software.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/eng_software.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="27" lean-forward="true" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-              <folding>
-                <element signature="e#65#66#0" expanded="true" />
-                <element signature="e#130#131#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/routes/home.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="22" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -162,7 +159,7 @@
       <file leaf-file-name="login.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
+            <state relative-caret-position="21">
               <caret line="20" column="24" lean-forward="true" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
               <folding>
                 <element signature="e#56#57#0" expanded="true" />
@@ -200,7 +197,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="AUTO_COMMIT_ON_CHERRY_PICK" value="true" />
     <push-targets>
-      <push-target-info target-remote="origin" target-branch="master" repo="$PROJECT_DIR$" source="master" />
+      <push-target-info target-remote="projeto" target-branch="master" repo="$PROJECT_DIR$" source="master" />
     </push-targets>
   </component>
   <component name="IdeDocumentHistory">
@@ -233,12 +230,9 @@
         <option value="$PROJECT_DIR$/app/controllers/itens.js" />
         <option value="$PROJECT_DIR$/app/controllers/admin/edit/cliente.js" />
         <option value="$PROJECT_DIR$/app/controllers/admin/delete/cliente.js" />
-        <option value="$PROJECT_DIR$/app/controllers/admin/cadastro/cliente.js" />
         <option value="$PROJECT_DIR$/app/controllers/admin/cadastro/item.js" />
-        <option value="$PROJECT_DIR$/app/views/compras/efetuada.ejs" />
         <option value="$PROJECT_DIR$/app/views/admin/cadastro/cliente.ejs" />
         <option value="$PROJECT_DIR$/app/views/admin/delete/item.ejs" />
-        <option value="$PROJECT_DIR$/app/views/compras/negada.ejs" />
         <option value="$PROJECT_DIR$/app/views/Home/index.ejs" />
         <option value="$PROJECT_DIR$/app/views/listar/cliente/cliente.ejs" />
         <option value="$PROJECT_DIR$/app/views/listar/item/item.ejs" />
@@ -250,10 +244,13 @@
         <option value="$PROJECT_DIR$/app/controllers/compra.js" />
         <option value="$PROJECT_DIR$/app/models/ItemDAO.js" />
         <option value="$PROJECT_DIR$/app/views/listar/cliente/clientes.ejs" />
-        <option value="$PROJECT_DIR$/app/models/ClienteDAO.js" />
         <option value="$PROJECT_DIR$/app/routes/login.js" />
         <option value="$PROJECT_DIR$/app/views/admin/edit/cliente.ejs" />
         <option value="$PROJECT_DIR$/app/views/admin/edit/item.ejs" />
+        <option value="$PROJECT_DIR$/app/views/compras/efetuada.ejs" />
+        <option value="$PROJECT_DIR$/app/views/compras/negada.ejs" />
+        <option value="$PROJECT_DIR$/app/controllers/admin/cadastro/cliente.js" />
+        <option value="$PROJECT_DIR$/app/models/ClienteDAO.js" />
       </list>
     </option>
   </component>
@@ -548,7 +545,8 @@
       <workItem from="1510250312666" duration="19107000" />
       <workItem from="1510327992908" duration="7279000" />
       <workItem from="1510574627780" duration="35167000" />
-      <workItem from="1510698546125" duration="13050000" />
+      <workItem from="1510698546125" duration="13084000" />
+      <workItem from="1510779831472" duration="3867000" />
     </task>
     <task id="LOCAL-00001" summary="Projeto Atualizado">
       <created>1508104904950</created>
@@ -620,28 +618,34 @@
       <option name="project" value="LOCAL" />
       <updated>1510773857187</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Projeto Finalizado">
+      <created>1510778399182</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1510778399182</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132767000" />
+    <option name="totallyTimeSpent" value="136668000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17293233" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17561762" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35217902" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32990867" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35217902" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39929327" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32990867" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -782,9 +786,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-          <folding>
-            <element signature="e#464#760#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -792,11 +793,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="5" column="49" lean-forward="true" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
-          <folding>
-            <element signature="e#54#135#0" expanded="false" />
-            <element signature="e#97#98#0" expanded="false" />
-            <element signature="e#130#131#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -804,7 +800,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="367">
           <caret line="49" column="95" lean-forward="false" selection-start-line="49" selection-start-column="95" selection-end-line="49" selection-end-column="95" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -812,23 +807,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="47" column="97" lean-forward="false" selection-start-line="47" selection-start-column="97" selection-end-line="47" selection-end-column="97" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/compras/efetuada.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="48" column="12" lean-forward="false" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="95" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/compras/negada.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="48" column="97" lean-forward="false" selection-start-line="48" selection-start-column="97" selection-end-line="48" selection-end-column="97" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -836,7 +814,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="382">
           <caret line="46" column="97" lean-forward="false" selection-start-line="46" selection-start-column="97" selection-end-line="46" selection-end-column="97" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -844,7 +821,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="229">
           <caret line="48" column="97" lean-forward="false" selection-start-line="48" selection-start-column="97" selection-end-line="48" selection-end-column="97" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -852,7 +828,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
           <caret line="48" column="97" lean-forward="false" selection-start-line="48" selection-start-column="97" selection-end-line="48" selection-end-column="97" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -860,7 +835,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="423">
           <caret line="48" column="95" lean-forward="false" selection-start-line="48" selection-start-column="95" selection-end-line="48" selection-end-column="95" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -868,7 +842,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
           <caret line="153" column="16" lean-forward="false" selection-start-line="153" selection-start-column="16" selection-end-line="159" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -886,9 +859,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-          <folding>
-            <element signature="e#436#967#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -896,7 +866,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="852">
           <caret line="137" column="20" lean-forward="false" selection-start-line="137" selection-start-column="20" selection-end-line="137" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -904,9 +873,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="1" column="20" lean-forward="false" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-          <folding>
-            <element signature="e#95#293#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -924,7 +890,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="117" column="6" lean-forward="false" selection-start-line="117" selection-start-column="6" selection-end-line="117" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -932,7 +897,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="859" column="15" lean-forward="false" selection-start-line="859" selection-start-column="15" selection-end-line="859" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -940,7 +904,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -948,7 +911,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -991,10 +953,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="430">
           <caret line="29" column="12" lean-forward="false" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
-          <folding>
-            <element signature="e#62#369#0" expanded="true" />
-            <element signature="e#432#784#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1013,7 +971,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="262">
           <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1021,21 +978,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="e#63#281#0" expanded="true" />
-            <element signature="e#313#314#0" expanded="true" />
-            <element signature="e#339#340#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/eng_software.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
+        <state relative-caret-position="42">
           <caret line="4" column="27" lean-forward="true" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
           <folding>
-            <element signature="e#65#66#0" expanded="true" />
-            <element signature="e#130#131#0" expanded="true" />
+            <element signature="e#65#66#0" expanded="false" />
+            <element signature="e#130#131#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1050,7 +1002,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
+        <state relative-caret-position="21">
           <caret line="20" column="24" lean-forward="true" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
           <folding>
             <element signature="e#56#57#0" expanded="true" />
@@ -1082,31 +1034,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/admin/cadastro/cliente.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="32" column="32" lean-forward="true" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
-          <folding>
-            <element signature="e#67#292#0" expanded="true" />
-            <element signature="e#359#1226#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/admin/cadastro/item.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        <state relative-caret-position="63">
+          <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
           <folding>
             <element signature="e#64#282#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/edit/cliente.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/edit/item.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/compras/efetuada.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="18" lean-forward="false" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/compras/negada.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="18" lean-forward="false" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/admin/cadastro/cliente.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="25" column="86" lean-forward="true" selection-start-line="25" selection-start-column="86" selection-end-line="25" selection-end-column="86" />
+          <folding>
+            <element signature="e#67#292#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/ClienteDAO.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="51" column="30" lean-forward="false" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
+        <state relative-caret-position="126">
+          <caret line="69" column="17" lean-forward="false" selection-start-line="69" selection-start-column="17" selection-end-line="69" selection-end-column="17" />
           <folding>
             <element signature="e#32#33#0" expanded="true" />
             <element signature="e#71#72#0" expanded="true" />
@@ -1124,33 +1107,17 @@
             <element signature="e#1080#1793#0" expanded="true" />
             <element signature="e#1152#1785#0" expanded="true" />
             <element signature="e#1222#1740#0" expanded="true" />
-            <element signature="e#2548#3479#0" expanded="true" />
-            <element signature="e#2604#3475#0" expanded="true" />
-            <element signature="e#2676#3467#0" expanded="true" />
-            <element signature="e#2751#3422#0" expanded="true" />
-            <element signature="e#3549#4567#0" expanded="true" />
-            <element signature="e#3606#4563#0" expanded="true" />
-            <element signature="e#3679#4555#0" expanded="true" />
-            <element signature="e#3757#4543#0" expanded="true" />
-            <element signature="e#4598#4599#0" expanded="true" />
-            <element signature="e#4623#4624#0" expanded="true" />
+            <element signature="e#1880#2483#0" expanded="true" />
+            <element signature="e#1936#2479#0" expanded="true" />
+            <element signature="e#2008#2471#0" expanded="true" />
+            <element signature="e#2085#2426#0" expanded="true" />
+            <element signature="e#3593#4611#0" expanded="true" />
+            <element signature="e#3650#4607#0" expanded="true" />
+            <element signature="e#3723#4599#0" expanded="true" />
+            <element signature="e#3801#4587#0" expanded="true" />
+            <element signature="e#4642#4643#0" expanded="true" />
+            <element signature="e#4667#4668#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/edit/cliente.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="135" column="29" lean-forward="false" selection-start-line="135" selection-start-column="29" selection-end-line="135" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/edit/item.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="128" column="29" lean-forward="false" selection-start-line="128" selection-start-column="29" selection-end-line="128" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
