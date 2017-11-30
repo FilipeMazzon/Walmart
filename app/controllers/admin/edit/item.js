@@ -13,6 +13,7 @@ module.exports.chargeItem = function (application, req, res) {
     var itemToChange = req.body;
     var connection = application.config.dbConnection;
     var itemDAO = new application.app.models.ItemDAO(connection);
+
     var dataUser = {
         "nome": req.session.nome,
         "user": req.session.user,

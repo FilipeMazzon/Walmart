@@ -9,10 +9,10 @@ module.exports.cadastro_item = function (application, req, res) {
 module.exports.item_salvar = function (application, req, res) {
     var item = req.body;
     req.assert('id', 'id é obrigatório').notEmpty();
-    req.assert('id', 'id precisa ser um numero').isFloat();
+    req.assert('id', 'id precisa ser um numero e maior do que 0').isInt({min: 0});
     req.assert('nome', 'nome é obrigatório').notEmpty();
     req.assert('preco', 'preço é obrigatório').notEmpty();
-    req.assert('preco', 'preço precisa ser um numero').isFloat(2);
+    req.assert('preco', 'preço precisa ser um numero e maior do que 0').isFloat({min: 0});
     req.assert('descricao', 'Descricao é obrigatório').notEmpty();
 
     var erros = req.validationErrors();

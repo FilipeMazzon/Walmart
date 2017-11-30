@@ -16,6 +16,7 @@ ClienteDAO.prototype.updateCliente = function (user, req, res, cliente) {
             collection.update(user, cliente, {upsert: true});
         });
     });
+    req.session.saldo = cliente.credito;
 };
 ClienteDAO.prototype.dropCliente = function (cliente) {
     console.log(cliente);
@@ -44,7 +45,6 @@ ClienteDAO.prototype.getClientes = function (req, res, where, userData) {
         });
     });
 };
-
 ClienteDAO.prototype.getCliente = function (cliente, req, res, where, userData) {
     this._connection.open(function (err, mongoclient) {
         mongoclient.collection("clientes", function (err, collection) {
@@ -110,7 +110,6 @@ ClienteDAO.prototype.comprar = function (item, req, res, dataUser) {
                 if (aux.credito > 0) {
                     req.session.saldo = aux.credito;
                     collection.update(dataUser, aux, {upsert: true});
-
                     res.render("compras/efetuada", {item: item, user: aux});
                 }
                 else {

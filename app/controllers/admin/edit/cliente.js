@@ -10,6 +10,7 @@ module.exports.editar_cliente = function (application, req, res) {
 };
 module.exports.chargeCliente = function (application, req, res) {
     var clienteToChange = req.body;
+
     var connection = application.config.dbConnection;
     var dataUser = {
         "nome": req.session.nome,
@@ -18,8 +19,6 @@ module.exports.chargeCliente = function (application, req, res) {
     };
     var clienteDAO = new application.app.models.ClienteDAO(connection);
     clienteDAO.getCliente(clienteToChange, req, res, "edit", dataUser);
-
-
 };
 module.exports.changeCliente = function (application, req, res) {
     var theChange = req.body;
